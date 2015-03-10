@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white_C">
+
+    <TextView
+        android:id="@+id/inforDialogTitleTv"
+        android:layout_height="@dimen/dp60_S"
+        android:layout_width="match_parent"
+        android:background="@color/semiRed"
+        />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="서비스 정보가 유용하였습니까?"
+        android:layout_marginTop="@dimen/dp10_S"
+        android:textSize="@dimen/sp20_S"
+        android:textColor="@color/black_C"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp20_S"
+        android:layout_marginTop="@dimen/dp10_S">
+        <RadioGroup
+            android:id="@+id/usefulGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="유용하였습니다"
+                android:id="@+id/useful"
+                android:textSize="@dimen/sp15_S"
+                android:textColor="@color/black_C"/>
+
+            <RadioButton
+                android:layout_marginTop="@dimen/dp10_S"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/notuseful"
+                android:text="유용하지 않았습니다"
+                android:textSize="@dimen/sp15_S"
+                android:textColor="@color/black_C"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:id="@+id/inforDialogConfirmBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp30_S"
+        android:layout_marginLeft="@dimen/dp30_S"
+        android:layout_marginTop="@dimen/dp80_S"
+        android:paddingBottom="@dimen/dp10_S"
+        android:paddingTop="@dimen/dp10_S"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/sp20_S"
+        android:textColor="@color/white_C"
+        android:background="@drawable/rounded_conner"
+        android:text="@string/confirm_T"
+        android:layout_marginBottom="@dimen/dp30_S"/>
+
+</LinearLayout>

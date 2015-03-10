@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--size-->
+    <dimen name="dp30_S">30dp</dimen>
+    <dimen name="dp20_S">20dp</dimen>
+    <dimen name="dp10_S">10dp</dimen>
+    <dimen name="dp80_S">80dp</dimen>
+    <dimen name="dp60_S">60dp</dimen>
+
+
+    <dimen name="sp30_S">30sp</dimen>
+    <dimen name="sp20_S">20sp</dimen>
+    <dimen name="sp15_S">15sp</dimen>
+</resources>

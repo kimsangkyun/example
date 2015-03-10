@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/white_C">
+
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/beaconMainImage"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/dp30_S"
+        android:layout_marginRight="@dimen/dp30_S"
+        android:src="@mipmap/ic_launcher" />
+
+    <Button
+        android:id="@+id/closeBt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/dp30_S"
+        android:layout_marginLeft="@dimen/dp30_S"
+        android:paddingBottom="@dimen/dp10_S"
+        android:paddingTop="@dimen/dp10_S"
+        android:gravity="center_horizontal"
+        android:textSize="@dimen/sp30_S"
+        android:textColor="@color/white_C"
+        android:background="@drawable/rounded_conner"
+        android:text="@string/close_T"
+        android:layout_marginBottom="@dimen/dp30_S"/>
+</LinearLayout>

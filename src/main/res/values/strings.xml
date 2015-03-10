@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">smartService</string>
+
+    <!--text-->
+    <string name="smart_T">SMART</string>
+    <string name="service_T">SERVICE</string>
+    <string name="bold_T">bold</string>
+    <string name="mainExplain_T">Smart Service APP을 설치해 주셔서 감사 합니다. 보다 나은 서비스를 위하여 사용자의 나이, 성별 , 전화번호를 입력해 주시면 감사하겠습니다.</string>
+    <string name="birthYear_T">출생년도</string>
+    <string name="sex_T">성    별</string>
+    <string name="male_T">남자</string>
+    <string name="female_T">여자</string>
+    <string name="phone_T">핸드폰</string>
+    <string name="confirm_T">확  인</string>
+    <string name="semicolon_T">:</string>
+    <string name="birthYear_T_H">ex)1989</string>
+    <string name="sexCheck_T_Sentence">성별을 체크해 주세요.</string>
+    <string name="birthYear_T_Sentence">생년월일을 제대로 입력해 주세요.</string>
+    <string name="phone_T_Sentence">핸드폰 번호를 제대로 입력해 주세요.</string>
+    <string name="wait_T_Sentence">잠시만 기다려주세요..</string>
+    <string name="close_T">닫기</string>
+    <!--color-->
+    <color name="white_C">#ffffff</color>
+    <color name="black_C">#000000</color>
+    <color name="semiRed">#c0504d</color>
+</resources>
+
+
