@@ -28,7 +28,7 @@ public class NetworkConnection {
   public static NetworkConnection getNetworkConnection(Context context) {
     NetworkConnection.context = context;
     if (networkConnection == null) {
-      synchronized(NetworkConnection.class) {
+      synchronized (NetworkConnection.class) {
         if (networkConnection == null) {
           networkConnection = new NetworkConnection();
         }
@@ -46,8 +46,8 @@ public class NetworkConnection {
 
     final DialogManager dialog = DialogManager.getDialogManage(context);
     dialog.waitDialogOpen(context.getString(R.string.wait_T_Sentence));
-    RequestQueue mRequestQueue = Volley.newRequestQueue(context);
-    mRequestQueue.add(new JsonObjectRequest(Request.Method.GET, "", null,
+    RequestQueue requestQueue = Volley.newRequestQueue(context);
+    requestQueue.add(new JsonObjectRequest(Request.Method.GET, "", null,
       new Response.Listener<JSONObject>() {
         public void onResponse(JSONObject jsonRoot) {
           responseJsonObject = jsonRoot;
@@ -70,7 +70,7 @@ public class NetworkConnection {
     ));
   }
 
-  public JSONObject getResponseJSON(){
+  public JSONObject getResResponseJsonObject() {
     return responseJsonObject;
   }
 }
