@@ -32,11 +32,11 @@ public class UserInforActivity extends Activity implements View.OnClickListener{
   EditText phoneMiddleEt;
   EditText phoneLastEt;
   Button confirmBt;
-
+  RadioButton clickedRadioBt;
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.userinforlayout);
+    setContentView(R.layout.userinfor);
     setFindByViewAndEvent();
   }
 
@@ -78,7 +78,7 @@ public class UserInforActivity extends Activity implements View.OnClickListener{
         return;
     }
 
-    RadioButton clickedRadioBt = (RadioButton)findViewById(checkedRadioButtonInt);
+    clickedRadioBt = (RadioButton)findViewById(checkedRadioButtonInt);
 
     postDataServer();
 }
