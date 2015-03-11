@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@color/semiRed">
 
     <TextView
         android:id="@+id/titleNameTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="망고식스 망고"
-        android:textSize="@dimen/sp15_S"
+        android:textSize="@dimen/sp30_S"
+        android:textColor="@color/white_C"
         android:gravity="center_horizontal"
-        android:layout_marginLeft="@dimen/dp20_S"
-        android:layout_marginRight="@dimen/dp20_S"
         />
 
 </RelativeLayout>

@@ -19,10 +19,12 @@
     <string name="phone_T_Sentence">핸드폰 번호를 제대로 입력해 주세요.</string>
     <string name="wait_T_Sentence">잠시만 기다려주세요..</string>
     <string name="close_T">닫기</string>
+
     <!--color-->
     <color name="white_C">#ffffff</color>
     <color name="black_C">#000000</color>
     <color name="semiRed">#c0504d</color>
+    <color name="semiWhite_C">#f8f8f8</color>
 </resources>
 
 

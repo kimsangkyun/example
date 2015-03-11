@@ -66,6 +66,7 @@ import java.util.ArrayList;
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(R.layout.expandlistchild, null);
         holder = new ViewHolder();
+        convertView.setTag(holder);
       }else{
         holder = (ViewHolder)convertView.getTag();
       }
@@ -91,7 +92,6 @@ import java.util.ArrayList;
     // TODO Auto-generated method stub
     TitleNameItem titleNameItem = goodsItemList.get(groupPosition);
     int count = 0;
-
     if(titleNameItem.getGoodsItemList().size() != 0){
       count = titleNameItem.getGoodsItemList().size();
     }
