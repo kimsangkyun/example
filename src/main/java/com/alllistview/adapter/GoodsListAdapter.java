@@ -1,4 +1,4 @@
-package com.expandlistview.adapter;
+package com.alllistview.adapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -11,35 +11,23 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alllistview.helper.ChildItemHolderHelper;
+import com.alllistview.helper.ParentHolderHelper;
 import com.example.ksk1004zz.smartservice.R;
-import com.expandlistview.vo.GoodsItem;
-import com.expandlistview.vo.TitleNameItem;
+import com.alllistview.vo.GoodsItem;
+import com.alllistview.vo.TitleNameItem;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-@SuppressLint("ResourceAsColor") public class CustomEListViewAdapter extends BaseExpandableListAdapter {
+@SuppressLint("ResourceAsColor") public class GoodsListAdapter extends BaseExpandableListAdapter {
 
   Context context;
-  private int gubun = 0; //0�̸� ������ 1�̸� �׺������ 2�̸� �� �� ����Ʈ
   private ArrayList<TitleNameItem> goodsItemList = null;
 
-  public CustomEListViewAdapter(Context context, ArrayList<TitleNameItem> goodsItemList) {
+  public GoodsListAdapter(Context context, ArrayList<TitleNameItem> goodsItemList) {
     this.context = context;
     this.goodsItemList = goodsItemList;
-  }
-
-  /*private view holder class*/
-  private class ViewHolder {
-    ImageView productImageIv;
-    TextView productNameTv;
-    TextView productPriceTv;
-    TextView productDescriptionTv;
-  }
-
-  /*private view holder class*/
-  private class TitleViewHolder {
-    TextView titleNameTv;
   }
 
   @Override
@@ -54,32 +42,27 @@ import java.util.ArrayList;
     return childPosition;
   }
 
-  ViewHolder holder;
-
   @Override
   public View getChildView(int groupPosition, int childPosition,
                            boolean isLastChild, View convertView, ViewGroup parent) {
     // TODO Auto-generated method stub
     try{
       GoodsItem goodItem = (GoodsItem)getChild(groupPosition, childPosition);
+
       if(convertView == null){
-        LayoutInflater inflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(R.layout.expandlistchild, null);
-        holder = new ViewHolder();
-        convertView.setTag(holder);
-      }else{
-        holder = (ViewHolder)convertView.getTag();
+        LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        convertView = inflater.inflate(R.layout.goodslistchild, null);
       }
 
-      holder.productNameTv = (TextView)convertView.findViewById(R.id.productNameTv);
-      holder.productPriceTv = (TextView)convertView.findViewById(R.id.productPriceTv);
-      holder.productImageIv = (ImageView)convertView.findViewById(R.id.productImageIv);
-      holder.productDescriptionTv = (TextView)convertView.findViewById(R.id.productDescriptionTv);
+      TextView goodsNameTv = ChildItemHolderHelper.get(convertView, R.id.goodsNameTv);
+      TextView goodsPriceTv = ChildItemHolderHelper.get(convertView, R.id.goodsPriceTv);
+      TextView goodsDescriptionTv = ChildItemHolderHelper.get(convertView, R.id.goodsDescriptionTv);
+      ImageView goodsImageIv = ChildItemHolderHelper.get(convertView, R.id.goodsImageIv);
 
-      holder.productNameTv.setText(goodItem.getName());
-      holder.productPriceTv.setText(goodItem.getPrice());
-      holder.productDescriptionTv.setText(goodItem.getDescription());
-      Picasso.with(context).load(goodItem.getUrlImage()).into(holder.productImageIv);
+      goodsNameTv.setText(goodItem.getGoodsName() + groupPosition + ":" + childPosition);
+      goodsPriceTv.setText(goodItem.getGoodsPrice());
+      goodsDescriptionTv.setText(goodItem.getGoodsDescription());
+      Picasso.with(context).load(goodItem.getGoodsImage()).into(goodsImageIv);
 
     }catch(Exception e){
       Log.i("test","list error : "+e.toString());
@@ -116,7 +99,6 @@ import java.util.ArrayList;
     return groupPosition;
   }
 
-  TitleViewHolder titleHolder = null;
 
   @Override
   public View getGroupView(int groupPosition, boolean isExpanded,
@@ -128,15 +110,11 @@ import java.util.ArrayList;
               .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 
       if(convertView == null) {
-        convertView = mInflater.inflate(R.layout.expandlistparent, null);
-        titleHolder = new TitleViewHolder();
-        convertView.setTag(titleHolder);
-      }else{
-        titleHolder = (TitleViewHolder)convertView.getTag();
+        convertView = mInflater.inflate(R.layout.goodslistparent, null);
       }
 
-      titleHolder.titleNameTv = (TextView)convertView.findViewById(R.id.titleNameTv);
-      titleHolder.titleNameTv.setText(titleNameItem.getTitleName());
+      TextView titleNameTv = ParentHolderHelper.get(convertView, R.id.titleNameTv);
+      titleNameTv.setText(titleNameItem.getTitleName());
 
     }catch(Exception e){Log.i("123123",e.getLocalizedMessage());}
     return convertView;
@@ -154,8 +132,5 @@ import java.util.ArrayList;
     // TODO Auto-generated method stub
     return true;
   }
-
-
-
 
 }

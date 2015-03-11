@@ -20,7 +20,7 @@ import org.json.JSONObject;
 public class NetworkConnection {
 
   private volatile static NetworkConnection networkConnection;
-  private JSONObject responseJsonObject = null;
+  //private JSONObject responseJsonObject = null;
   private static Context context;
 
   private NetworkConnection(){}
@@ -38,19 +38,19 @@ public class NetworkConnection {
     return networkConnection;
   }
 
-  public void requestGetType(String url) {
+  /*public void requestGetType(String url) {
     requestGetType(url, null);
-  }
+  }*/
 
   public void requestGetType(String url, final NetworkCallback networkCallback) {
 
     final DialogManager dialog = DialogManager.getDialogManage(context);
     dialog.waitDialogOpen(context.getString(R.string.wait_T_Sentence));
     RequestQueue requestQueue = Volley.newRequestQueue(context);
-    requestQueue.add(new JsonObjectRequest(Request.Method.GET, "", null,
+    requestQueue.add(new JsonObjectRequest(Request.Method.GET, url, null,
       new Response.Listener<JSONObject>() {
         public void onResponse(JSONObject jsonRoot) {
-          responseJsonObject = jsonRoot;
+          //responseJsonObject = jsonRoot;
 
           if (context instanceof NetworkCallback) {
             ((NetworkCallback)context).networkCallback();
@@ -70,7 +70,7 @@ public class NetworkConnection {
     ));
   }
 
-  public JSONObject getResResponseJsonObject() {
+  /*public JSONObject getResResponseJsonObject() {
     return responseJsonObject;
-  }
+  }*/
 }

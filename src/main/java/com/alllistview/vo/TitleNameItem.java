@@ -1,4 +1,4 @@
-package com.expandlistview.vo;
+package com.alllistview.vo;
 
 import java.util.ArrayList;
 
@@ -6,8 +6,8 @@ import java.util.ArrayList;
  * Created by ksk1004zz on 2015-03-09.
  */
 public class TitleNameItem {
- private String titleName;
- private ArrayList<GoodsItem> goodsItemList;
+  private String titleName;
+  private ArrayList<GoodsItem> goodsItemList;
 
 
   /**
@@ -22,11 +22,12 @@ public class TitleNameItem {
   /**
    * Instantiates a new Title name item.
    *
-   * @param name the name
+   * @param titleName the name
    */
+  @SuppressWarnings (value="unchecked")
   public TitleNameItem(String titleName) {
     this.titleName = titleName;
-    goodsItemList = new ArrayList<GoodsItem>();
+    goodsItemList = new ArrayList();
   }
 
   /**
@@ -34,7 +35,7 @@ public class TitleNameItem {
    *
    * @return the array list
    */
-  public ArrayList<GoodsItem> getGoodsItemList(){
+  public ArrayList<GoodsItem> getGoodsItemList() {
     return goodsItemList;
   }
 
