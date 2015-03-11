@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/semiWhite_C">
+              android:orientation="vertical" android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/semiWhite_C">
     <ExpandableListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="1dp"
         android:padding="@dimen/dp10_S"
         android:id="@+id/expandLv"
         android:groupIndicator="@null"
         android:background="@color/white_C"
         android:dividerHeight="@dimen/dp10_S"
+        android:layout_weight="1"
         />
-
+    <include
+        layout="@layout/beaconbottom"/>
 </LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/goodsImageIvLl"
+        android:layout_margin="@dimen/dp10_S">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/goodsImageIv"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/goodsNameTv"
+        android:text="123123123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goodsImageIvLl"
+        android:layout_marginTop="@dimen/dp10_S"
+        />
+
+    <TextView
+        android:id="@+id/goodsPriceTv"
+        android:text="123123123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goodsImageIvLl"
+        android:layout_below="@id/goodsNameTv"
+        />
+
+    <TextView
+        android:id="@+id/goodsDescriptionTv"
+        android:text="123123123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/goodsImageIvLl"
+        android:layout_below="@id/goodsPriceTv"
+        />
+</RelativeLayout>

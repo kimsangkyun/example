@@ -7,40 +7,59 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/productImageIvLl"
+        android:id="@+id/storeImageIvLl"
         android:layout_margin="@dimen/dp10_S">
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:src="@mipmap/ic_launcher"
-            android:id="@+id/productImageIv"
+            android:id="@+id/storeImageIv"
             />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/productNameTv"
+        android:id="@+id/storeMainNameTv"
         android:text="123123123"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/productImageIvLl"
+        android:layout_toRightOf="@id/storeImageIvLl"
         android:layout_marginTop="@dimen/dp10_S"
         />
 
     <TextView
-        android:id="@+id/productPriceTv"
+        android:id="@+id/storeSubmainTv"
         android:text="123123123"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/productImageIvLl"
-        android:layout_below="@id/productNameTv"
+        android:layout_toRightOf="@id/storeImageIvLl"
+        android:layout_below="@id/storeMainNameTv"
         />
 
     <TextView
-        android:id="@+id/productDescriptionTv"
+        android:id="@+id/storeAddrTv"
         android:text="123123123"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/productImageIvLl"
-        android:layout_below="@id/productPriceTv"
+        android:layout_toRightOf="@id/storeImageIvLl"
+        android:layout_below="@id/storeSubmainTv"
         />
+
+    <TextView
+        android:id="@+id/storeTelTv"
+        android:text="123123123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/storeImageIvLl"
+        android:layout_below="@id/storeAddrTv"
+        />
+
+    <TextView
+        android:id="@+id/storeAccessDateTv"
+        android:text="123123123"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/storeImageIvLl"
+        android:layout_below="@id/storeTelTv"
+        />
+
 </RelativeLayout>
