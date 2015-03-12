@@ -28,6 +28,8 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem>{
     this.context = context;
   }
 
+  public void mani(){}
+
   @Override
   public View getView(int position, View convertView, ViewGroup parent) {
     StoreItem storeItem = getItem(position);
