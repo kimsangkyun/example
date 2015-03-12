@@ -27,7 +27,7 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem>{
     super(context, resourceId, items);
     this.context = context;
   }
-  
+
   @Override
   public View getView(int position, View convertView, ViewGroup parent) {
     StoreItem storeItem = getItem(position);
