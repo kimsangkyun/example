@@ -53,4 +53,6 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem>{
 
     return convertView;
   }
+
+
 }
