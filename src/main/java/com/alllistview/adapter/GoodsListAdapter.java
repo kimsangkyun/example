@@ -70,8 +70,6 @@ import java.util.ArrayList;
     return convertView;
   }
 
-  public void haha(){}
-
   @Override
   public int getChildrenCount(int groupPosition) {//������ŭ getChildView ȣ��
     // TODO Auto-generated method stub
