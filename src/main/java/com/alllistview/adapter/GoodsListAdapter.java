@@ -13,9 +13,9 @@ import android.widget.TextView;
 
 import com.alllistview.helper.ChildItemHolderHelper;
 import com.alllistview.helper.ParentHolderHelper;
-import com.example.ksk1004zz.smartservice.R;
 import com.alllistview.vo.GoodsItem;
 import com.alllistview.vo.TitleNameItem;
+import com.example.ksk1004zz.smartservice.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -31,7 +31,7 @@ import java.util.ArrayList;
   }
 
   @Override
-  public Object getChild(int groupPosition, int childPosition) {
+  public GoodsItem getChild(int groupPosition, int childPosition) {
     // TODO Auto-generated method stub
     TitleNameItem titleNameItem = goodsItemList.get(groupPosition);
     return titleNameItem.getGoodsItemList().get(childPosition);
@@ -47,7 +47,7 @@ import java.util.ArrayList;
                            boolean isLastChild, View convertView, ViewGroup parent) {
     // TODO Auto-generated method stub
     try{
-      GoodsItem goodItem = (GoodsItem)getChild(groupPosition, childPosition);
+      GoodsItem goodItem = getChild(groupPosition, childPosition);
 
       if(convertView == null){
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -69,7 +69,7 @@ import java.util.ArrayList;
     }
     return convertView;
   }
-  
+
   @Override
   public int getChildrenCount(int groupPosition) {//������ŭ getChildView ȣ��
     // TODO Auto-generated method stub
@@ -83,7 +83,7 @@ import java.util.ArrayList;
   }
 
   @Override
-  public Object getGroup(int groupPosition) {
+  public TitleNameItem getGroup(int groupPosition) {
     return goodsItemList.get(groupPosition);
   }
 
@@ -105,7 +105,7 @@ import java.util.ArrayList;
                            View convertView, ViewGroup parent) {
     try{
 
-      TitleNameItem titleNameItem = (TitleNameItem)getGroup(groupPosition);
+      TitleNameItem titleNameItem = getGroup(groupPosition);
       LayoutInflater mInflater = (LayoutInflater) context
               .getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 
