@@ -25,8 +25,8 @@ public class BeaconItemListActivity extends Activity implements NetworkCallback{
     super.onCreate(savedInstanceState);
     setContentView(R.layout.goodslist);
     showListView();
-    networkConnection = NetworkConnection.getNetworkConnection(this);
-    networkConnection.requestGetType("url");
+    /*networkConnection = NetworkConnection.getNetworkConnection(this);
+    networkConnection.requestGetType("url");*/
   }
 
   public void showListView(/*JSONObject rrjo*/) {

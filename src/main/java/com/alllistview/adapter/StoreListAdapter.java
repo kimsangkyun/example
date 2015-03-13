@@ -21,11 +21,15 @@ import java.util.List;
 public class StoreListAdapter extends ArrayAdapter<StoreItem>{
 
   private Context context;
+  private int resourceId;
+  private List<StoreItem> items;
 
   public StoreListAdapter(Context context, int resourceId,
                                List<StoreItem> items) {
     super(context, resourceId, items);
     this.context = context;
+    this.resourceId = resourceId;
+    this.items = items;
   }
 
 
@@ -39,7 +43,7 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem>{
     }
 
     TextView storeMainNameTv = ChildItemHolderHelper.get(convertView, R.id.storeMainNameTv);
-    TextView storeSubmainNameTv = ChildItemHolderHelper.get(convertView, R.id.storeMainNameTv);
+    TextView storeSubmainNameTv = ChildItemHolderHelper.get(convertView, R.id.storeSubmainTv);
     TextView storeAddrTv = ChildItemHolderHelper.get(convertView, R.id.storeSubmainTv);
     TextView storeTelTv = ChildItemHolderHelper.get(convertView, R.id.storeAddrTv);
     TextView storeAccessDate = ChildItemHolderHelper.get(convertView, R.id.storeAccessDateTv);
@@ -54,6 +58,5 @@ public class StoreListAdapter extends ArrayAdapter<StoreItem>{
 
     return convertView;
   }
-
 
 }

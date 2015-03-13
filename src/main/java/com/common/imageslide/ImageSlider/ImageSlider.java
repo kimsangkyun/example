@@ -49,7 +49,6 @@ public class ImageSlider implements NetworkCallback{
                 if(v.getId() == R.id.leftSlideIv){
                     bothWay = 1;
                 }
-
                 mPager.setCurrentItem(mPager.getCurrentItem() + bothWay, true);
             }
         };
